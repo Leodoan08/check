@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
 <title>            GO_RESTAURANT         </title>
-<style type="text/css">
-   body {
-          background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0.75)),url("./back_ground.jpeg");
-          background-color:whitesmoke;
-          
-        }
-</style>
-<body><div> 
-  <h1 style="color:whitesmoke; font-size: 40px;font-style: normal;">Sign in </h1>
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+<body><div class="main"> 
+  <h1>LOG IN </h1>
+  <% if (messages) { %>
+    <p><%= messages.error %></p>
+    <% } %>
     <form action="/login" method="POST">
-      <h2 style="color:whitesmoke; font-size: 25px;font-style: normal;"> User Name <br>
-      <input type="email" name="email" placeholder="Username"/>
-    </h2>
-      <h3 style="color:whitesmoke; font-size: 25px;font-style: normal;"> Password <br>
-        <input type="password" name="password" placeholder="***********"/>
-    </h3>
-    <button>Sign In</button>
-    <h4 style="color:whitesmoke; font-size: 25px;font-style: normal;">
-         Don't have an account? </h4>
-         <a href="/register"> <h5 style="color:whitesmoke; font-size: 25px;font-style: normal";> Register</a>
+    <h2 style="color:rgb(49, 48, 48); font-size: 15px;font-style: normal;">User Name(Gmail) <br></h2>
+      <input type="email" name="email" placeholder="Gmail"/>
+    
+    <h3 style="color:rgb(49, 48, 48); font-size: 15px;font-style: normal;"> Password <br> </h3>
+        <input type="password" name="password" placeholder="* * * * * *" />
+  
+    <button>SIGN IN</button> <br>
+  </form>
+  <h4 style="color:rgb(49, 48, 48); font-size: 15px;font-style: normal; margin-top: 20px;"> Don't Have An Account?
+    <a href="/register"> register</a> <br>
+  </h4> 
     <script src="jquery-3.6.0.min.js"  >  </script>
     <script src="scripts.js">     </script>
-  </form>
   </div>
 </body>
 </head>

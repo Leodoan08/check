@@ -43,9 +43,7 @@ app.use(passport.session());
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
 
-app.get("/", checkAuthenticated, (req, res) => {
-  res.render("home");
-});
+
 app.get("/index", checkAuthenticated, (req, res) => {
   res.render("index", { name: req.user.name });
 });
@@ -56,6 +54,9 @@ app.get("/register", checkNotAuthenticated, (req, res) => {
 
 app.get("/login", checkNotAuthenticated, (req, res) => {
   res.render("login");
+});
+app.get("/", checkNotAuthenticated, (req, res) => {
+  res.render("home");
 });
 
 app.post(
