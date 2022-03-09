@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <div class="main">
-      <h1>SIGN IN TO YOUR ACCOUNT</h1>
-      <% if (messages) { %>
-      <p><%= messages.error %></p>
-      <% } %>
-      <form action="/login" method="POST">
-        <input
-          type="email"
-          name="email"
-          placeholder="johnnythedesigner@gmail.com"
-        />
-        <input type="password" name="password" placeholder="* * * * * *" />
-        <button>SIGN IN</button>
-      </form>
-    </div>
-  </body>
+<head>
+<title>            GO_RESTAURANT         </title>
+<style type="text/css">
+   body {
+          background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0.75)),url("./back_ground.jpeg");
+          background-color:whitesmoke;
+          
+        }
+</style>
+<body><div> 
+  <h1 style="color:whitesmoke; font-size: 40px;font-style: normal;">Sign in </h1>
+    <form action="/login" method="POST">
+      <h2 style="color:whitesmoke; font-size: 25px;font-style: normal;"> User Name <br>
+      <input type="email" name="email" placeholder="Username"/>
+    </h2>
+      <h3 style="color:whitesmoke; font-size: 25px;font-style: normal;"> Password <br>
+        <input type="password" name="password" placeholder="***********"/>
+    </h3>
+    <button>Sign In</button>
+    <h4 style="color:whitesmoke; font-size: 25px;font-style: normal;">
+         Don't have an account? </h4>
+         <a href="/register"> <h5 style="color:whitesmoke; font-size: 25px;font-style: normal";> Register</a>
+    <script src="jquery-3.6.0.min.js"  >  </script>
+    <script src="scripts.js">     </script>
+  </form>
+  </div>
+</body>
+</head>
 </html>
+
+

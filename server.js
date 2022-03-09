@@ -44,6 +44,9 @@ app.use(methodOverride("_method"));
 app.use(express.static("public"));
 
 app.get("/", checkAuthenticated, (req, res) => {
+  res.render("home");
+});
+app.get("/index", checkAuthenticated, (req, res) => {
   res.render("index", { name: req.user.name });
 });
 
@@ -59,7 +62,7 @@ app.post(
   "/login",
   checkNotAuthenticated,
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/index",
     failureRedirect: "/login",
     failureFlash: true,
   })
@@ -91,7 +94,7 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
 
 app.delete("/logout", (req, res) => {
   req.logOut();
-  res.redirect("/login");
+  res.redirect("/");
 });
 
 mongoose

@@ -7,12 +7,12 @@
 }
 
 body {
-  background-color: #6a5acd;
-  display: grid;
-  place-items: center;
-  width: 100vw;
-  height: 100vh;
-  font-family: "Encode Sans SC", sans-serif;
+ background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0.75)),url("./images/back_ground.jpeg");
+ display: grid;
+ place-items: center;
+ width: 100vw;
+ height: 100vh;
+ font-family: "Encode Sans SC", sans-serif;
 }
 
 .main {
