@@ -47,6 +47,15 @@ app.use(express.static("public"));
 app.get("/index", checkAuthenticated, (req, res) => {
   res.render("index", { name: req.user.name });
 });
+app.get("/aboutus", checkNotAuthenticated, (req, res) => {
+  res.render("aboutus");
+});
+app.get("/contractus", checkNotAuthenticated, (req, res) => {
+  res.render("contractus");
+});
+app.get("/feelback", checkNotAuthenticated, (req, res) => {
+  res.render("feelback");
+});
 
 app.get("/register", checkNotAuthenticated, (req, res) => {
   res.render("register");

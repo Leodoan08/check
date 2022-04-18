@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login and Register</title>
-  </head>
+<head>                             
+<title>      WELCOME TO SERVER          </title>
+ <meta charset="UTF-8" />
+       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="indexuser.css">
+ </head>
   <body>
-    <h1>Hello <%= name%></h1>
-    <form action="/logout?_method=DELETE" method="POST">
-      <button type="submit">LOGOUT</button>
-    </form>
+    <div class="banner">
+      <div class="navbar">
+        <ul>
+          <li> <form action="/logout?_method=DELETE" method="POST"></li>
+            <li><button type="submit">LOGOUT</button> </li>
+   </form>
+  </ul>
+</div>
+<div class="content">
+  <h1 >Hello <%= name%></h1>
+</div>
+  <div class="text">
+    <a href = /menus> Menus UpLoad</a>
+  </div>
+  <div class ="text2">
+    <a href = /Reservation> Reservation Design</a>
+    </div>
+    <script src="jquery-3.6.0.min.js"  >  </script>
+      <script src="scripts.js">     </script>
+    </div>
   </body>
-</html>
+  </head>
+  </html>
+  
+
+
+
+
+
+
+
+
